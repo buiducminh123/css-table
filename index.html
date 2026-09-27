@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>CSS Table</title>
+    <style>
+        body {
+            font-family: Tahoma, sans-serif;
+        }
+
+        /* 1. Viền đôi */
+        .t1,
+        .t1 th,
+        .t1 td {
+            border: 1px solid black;
+        }
+
+        /* 2. Viền đơn */
+        .t2 {
+            border-collapse: collapse;
+        }
+
+        .t2,
+        .t2 th,
+        .t2 td {
+            border: 1px solid black;
+        }
+
+        /* 3 → 7. Bảng đầy đủ */
+        .t3 {
+            border-collapse: collapse;
+            width: 100%;
+            /* 3. width */
+        }
+
+        .t3,
+        .t3 th,
+        .t3 td {
+            border: 1px solid green;
+            /* 7. màu viền */
+        }
+
+        .t3 th {
+            height: 50px;
+            /* 3. height */
+            text-align: left;
+            /* 4. căn ngang */
+            background-color: green;
+            /* 7. màu nền */
+            color: white;
+            /* 7. màu chữ */
+        }
+
+        .t3 td {
+            height: 50px;
+            vertical-align: bottom;
+            /* 5. căn dọc */
+        }
+
+        .t3 th,
+        .t3 td {
+            padding: 15px;
+            /* 6. padding */
+        }
+    </style>
+</head>
+
+<body>
+    <h2>1. Viền đôi (chỉ có border)</h2>
+    <table class="t1">
+        <tr>
+            <th>Họ</th>
+            <th>Tên</th>
+        </tr>
+        <tr>
+            <td>Nguyễn</td>
+            <td>An</td>
+        </tr>
+        <tr>
+            <td>Trần</td>
+            <td>Bình</td>
+        </tr>
+    </table>
+
+    <h2>2. Viền đơn (thêm border-collapse)</h2>
+    <table class="t2">
+        <tr>
+            <th>Họ</th>
+            <th>Tên</th>
+        </tr>
+        <tr>
+            <td>Nguyễn</td>
+            <td>An</td>
+        </tr>
+        <tr>
+            <td>Trần</td>
+            <td>Bình</td>
+        </tr>
+    </table>
+
+    <h2>3 → 7. Width, căn chỉnh, padding, màu sắc</h2>
+    <table class="t3">
+        <tr>
+            <th>Họ</th>
+            <th>Tên</th>
+            <th>Điểm</th>
+        </tr>
+        <tr>
+            <td>Nguyễn</td>
+            <td>An</td>
+            <td>8.5</td>
+        </tr>
+        <tr>
+            <td>Trần</td>
+            <td>Bình</td>
+            <td>7.0</td>
+        </tr>
+        <tr>
+            <td>Lê</td>
+            <td>Cường</td>
+            <td>9.0</td>
+        </tr>
+    </table>
+</body>
+
+</html>
